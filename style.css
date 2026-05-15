@@ -1,0 +1,128 @@
+/* 1. Variáveis e Reset */
+:root {
+    --primary-blue: #0047AB;
+    --primary-red: #C41E3A;
+    --white: #FFFFFF;
+    --light-grey: #f4f4f4;
+    --dark-grey: #333;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: var(--dark-grey);
+    line-height: 1.6;
+}
+
+/* 2. Layout Principal */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-red);
+}
+
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* 3. Tipografia */
+.main-headline {
+    color: var(--primary-red);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.meta-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.news-text {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+span {
+    color: var(--primary-red);
+    font-weight: bold;
+}
+
+/* 4. Mídia (Imagens e Vídeos) */
+.content-image {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border: 2px solid var(--primary-blue);
+    background-color: #ddd;
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0;
+    margin: 30px 0;
+    background-color: #000;
+    border: 2px solid var(--primary-blue);
+}
+
+.video-container iframe, 
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 5. Componentes Específicos */
+.health-alert {
+    background-color: var(--light-grey);
+    border-left: 10px solid var(--primary-red);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.health-alert h3 {
+    color: var(--primary-red);
+    margin-top: 0;
+}
+
+/* 6. Responsividade */
+@media (max-width: 600px) {
+    .main-headline { 
+        font-size: 1.8rem; 
+    }
+    .content-image { 
+        height: 250px; 
+    }
+}
