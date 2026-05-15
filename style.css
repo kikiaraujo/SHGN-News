@@ -32,6 +32,35 @@ header {
     border-bottom: 5px solid var(--primary-red);
 }
 
+/* Organiza o conteúdo do header em linha e centraliza */
+header .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre a logo e o texto */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Controla o tamanho da logo */
+.header-logo {
+    height: 120px; /* Ajuste a altura conforme preferir */
+    width: auto;   /* Mantém a proporção da largura */
+    object-fit: contain;
+}
+
+/* Ajuste para telas menores (celular) */
+@media (max-width: 600px) {
+    header .header-content {
+        flex-direction: column; /* No celular, a logo fica em cima do texto */
+        gap: 10px;
+    }
+    
+    .header-logo {
+        height: 45px;
+    }
+}
+
 footer {
     background-color: var(--primary-blue);
     color: var(--white);
